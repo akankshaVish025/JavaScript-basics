@@ -121,5 +121,18 @@ console.log(1 + 2 + "2");
 // INSTEAD
 console.log( (3 + 4) * 5 % 3);  // intead use paranthesis
 
+/** some other */
 
+// console.log(+true);
+// console.log(+"");
 
+let num1, num2, num3
+num1=num2=num3 = 2+2  // not good way to write code
+console.log(num1, num2, num3);
+
+let gameCounter = 100;
+gameCounter++;
+console.log(gameCounter, "gameCounter");
+
+// limk to study
+// https://developer.mozilla.org/en-US/docs/Glossary/Type_Conversion
