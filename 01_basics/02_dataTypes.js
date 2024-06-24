@@ -24,6 +24,9 @@ let state;
 // symbol => unique
 
 
+// Non-primitive datatypes
+// Object
+
 console.log(typeof "Akanksha");
 console.log(typeof null);  // object
 console.log(typeof undefined); // undefined

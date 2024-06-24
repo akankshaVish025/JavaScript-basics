@@ -1,3 +1,6 @@
+// Variables : Variables are containers for storing information
+// Keywords : Keywords are reserved words that are part of the syntax in the programming language.
+
 const accountId = 144553
 let accountEmail = "akanksha@google.com"
 var accountPassword = "1234"
