@@ -26,6 +26,9 @@ let state;
 
 // Non-primitive datatypes
 // Object
+// Array
+// document
+// function
 
 console.log(typeof "Akanksha");
 console.log(typeof null);  // object
