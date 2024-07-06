@@ -64,7 +64,7 @@ Two Types of memory:
 2. Heap - It is used in non-primitive. It used for dynamic memory allocation
 */
 
-// Example :
+// Example : Stack
 let myYoutubeName = "akankshavishwakarmadotcom";
 
 let anotherName = myYoutubeName;
@@ -73,6 +73,7 @@ anotherName = "chaiaurbiscuit";
 console.log(myYoutubeName);
 console.log(anotherName);
 
+// Example : Heap
 let userOne = {
   email: "user@google.com",
   upi: "user@ybl",
