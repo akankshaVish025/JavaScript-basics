@@ -60,8 +60,8 @@ garbage collection (GC). The purpose of a garbage collector is to monitor memory
 a block of allocated memory is no longer needed and reclaim it. 
 
 Two Types of memory:
-1. Stack - It is used in primitive. It is used for static memory allocation.
-2. Heap - It is used in non-primitive. It used for dynamic memory allocation
+1. Stack(We get copy) - It is used in primitive. It is used for static memory allocation.
+2. Heap(We get refernce) - It is used in non-primitive. It used for dynamic memory allocation
 */
 
 // Example : Stack
