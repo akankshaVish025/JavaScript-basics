@@ -37,16 +37,16 @@ let diff = d.getTimezoneOffset();
 console.log(diff, "timezone diff");
 
 let myNewDate = new Date(2023, 0, 23);
-console.log(myNewDate.toDateString());
+console.log(myNewDate.toDateString(), "myNewDate");
 
 let myNewDate1 = new Date(2023, 0, 23, 5, 3);
-console.log(myNewDate1.toLocaleString());
+console.log(myNewDate1.toLocaleString(), "myNewDate1");
 
 let myNewDate2 = new Date("2023-01-14");
-console.log(myNewDate2.toLocaleString());
+console.log(myNewDate2.toLocaleString(), "myNewDate2");
 
 let myNewDate3 = new Date("01-14-2023");
-console.log(myNewDate3.toLocaleString());
+console.log(myNewDate3.toLocaleString(), "myNewDate3");
 
 let myTimeStamp = Date.now()
 console.log(myTimeStamp,"TimeStamp");
