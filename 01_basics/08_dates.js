@@ -50,8 +50,8 @@ console.log(myNewDate3.toLocaleString(), "myNewDate3");
 
 let myTimeStamp = Date.now()
 console.log(myTimeStamp,"TimeStamp");
-console.log(myNewDate3.getTime());
-console.log(Math.floor(Date.now()/1000));
+console.log(myNewDate3.getTime(), "getTime");  // gives date in milliseconds[Comparison will always done in ms]
+console.log(Math.floor(Date.now()/1000)); // To convert in seconds divide by 1000 but it will give decimal value, so to avaoid decimal use Math.floor() or Math.round()
 
 
 let newDate = new Date()
@@ -61,11 +61,12 @@ console.log(newDate.getDay()); // mon=1, tue=2, wed=3, thur=4,.....
 
 
 console.log(`${newDate.getDay()}`);  // using string interpolation in projects
-console.log(newDate.toLocaleString('default', {
-   weekday: "long",
+console.log(newDate.toLocaleString('default', {  // To customize toLocaleString
+   weekday: "long",  
    timeZone: "Asia/Kolkata"
 }));
 
 // Note :
 // UTC (Universal Time Coordinated) is the same as GMT (Greenwich Mean Time).
-// In JavaScript, the first day of the week (day 0) is Sunday.
+// In JavaScript, the first day of the week (day 0) is Sunday. 
+// Months are counted from 0(Jan) - 11(Dec)
