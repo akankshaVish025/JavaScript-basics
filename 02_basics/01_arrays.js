@@ -76,6 +76,8 @@ const myn2 = myArr.splice(1, 3);
 console.log(myn2, "myn2");
 console.log(myArr, "Original Array");
 
+const nums = [1, 2, 3, 4];
+console.log(nums.splice(1, 0), "Splice");   // [] Since you're removing zero elements, it returns an empty array [].
 
 // toSpliced(): The toSpliced() method copies version of the splice() method. 
 // It returns a new array with some elements removed and/or replaced at a given index.
@@ -84,9 +86,11 @@ console.log(myArr, "Original Array");
 // The difference between the new toSpliced() method and the old splice() method is that the new method creates a new array, 
 // keeping the original array unchanged, while the old method altered the original array.
 
-const myn3 = myArr.toSpliced(0, 1);   // need latest version of node.js
-console.log(myn3, "myn3");
-console.log(myArr, "Original Array");
+// const myn3 = myArr.toSpliced(0, 1);   // need latest version of node.js
+// console.log(myn3, "myn3");
+// console.log(myArr, "Original Array");
+
+console.log(typeof myArr)
 
 
 
