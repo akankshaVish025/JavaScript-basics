@@ -90,12 +90,6 @@ console.log(nums.splice(1, 0), "Splice");   // [] Since you're removing zero ele
 // console.log(myn3, "myn3");
 // console.log(myArr, "Original Array");
 
-console.log(typeof myArr)
-
-
-
-
-
 
 
 
