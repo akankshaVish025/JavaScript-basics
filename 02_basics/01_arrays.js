@@ -91,5 +91,20 @@ console.log(nums.splice(1, 0), "Splice");   // [] Since you're removing zero ele
 // console.log(myArr, "Original Array");
 
 
+/*
+
+delete() method:
+
+*** Warning !
+Using delete() leaves undefined holes in the array.
+
+Use pop() or shift() instead.
+
+*/ 
+// EXample: 
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+console.log( delete fruits[0], "delete");
+console.log(fruits, "fruits"); // [ <1 empty item>, 'Orange', 'Apple', 'Mango' ]
+
 
 
