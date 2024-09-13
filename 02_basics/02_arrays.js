@@ -1,5 +1,16 @@
-// Check methods to merge array:
-// PUSH() :
+
+/*
+Check methods to merge array:
+JavaScript Array push() :
+
+The push() method adds new items to the end of an array.
+The push() method changes the length of the array.
+The push() method returns the new length.
+
+Return Value:
+A number -> The new length of the array.
+
+*/
 
 const marvel_heros = ["thor", "Ironman", "spiderman"];
 const dc_heros = ["superman", "flash", "batman"];
@@ -18,7 +29,7 @@ let allHeros = marvel_heros.concat(dc_heros)
 console.log(allHeros, "concat");  // [ 'thor', 'Ironman', 'spiderman', 'superman', 'flash', 'batman' ]
 
 // best methods to merge array:
-// SPREAD OPRERATOR(...) :
+// SPREAD OPRERATOR(...) : The ... operator expands an iterable (like an array) into more elements:
 
 const spreadRes = [...marvel_heros, ...dc_heros]; 
 console.log(spreadRes, "spread operator"); // [ 'thor', 'Ironman', 'spiderman', 'superman', 'flash', 'batman' ]
@@ -122,6 +133,12 @@ map() :
 map() creates a new array from calling a function for every array element.
 map() does not execute the function for empty elements.
 map() does not change the original array.
+
+Syntax:
+array.map(function(currentValue, index, arr), thisValue)
+
+Return Value:
+An array ->	The results of a function for each array element.
 */
 
 // Return a new array with the square root of all element values
@@ -197,3 +214,163 @@ The reverse() method overwrites the original array.
 const arr = ["Banana", "Orange", "Apple", "Mango"];
 console.log( arr.reverse(), "reverse");  // [ 'Mango', 'Apple', 'Orange', 'Banana' ]
 
+
+/*
+ JavaScript Array every():  [opposite of some()***]
+The every() method executes a function for each array element.
+The every() method returns true if the function returns true for all elements.
+The every() method returns false if the function returns false for one element.
+The every() method does not execute the function for empty elements.
+The every() method does not change the original array.
+
+Syntax:
+array.every(function(currentValue, index, arr), thisValue)
+
+Return Value:
+Boolean	-> true if all elements pass the test, otherwise false.
+*/
+
+// Create an Array
+const agess = [32, 33, 16, 40];
+
+// Create a Test Function
+function checkAge(age) {
+  return age > 18;
+}
+
+// Are all ages over 18?
+console.log(agess.every(checkAge)); // false 
+// The every() method returns true if every element in an array pass a function test else false.
+
+
+
+/*
+JavaScript Array fill():
+
+The fill() method fills specified elements in an array with a value.
+The fill() method overwrites the original array.
+Start and end position can be specified. If not, all elements will be filled.
+
+Syntax:
+array.fill(value, start, end)
+Return Value: Array -	The filled array.
+
+*/
+//Ex.1
+const fruit = ["Banana", "Orange", "Apple", "Mango"];
+console.log(fruit.fill("Kiwi"), "fill"); // [ 'Kiwi', 'Kiwi', 'Kiwi', 'Kiwi' ] 
+// Ex.2
+const fruit1 = ["Banana", "Orange", "Apple", "Mango"];
+console.log(fruit1.fill("Kiwi", 2, 4), "fill index");  // [ 'Banana', 'Orange', 'Kiwi', 'Kiwi' ] 
+
+
+/*
+JavaScript Array filter():
+The filter() method creates a new array filled with elements that pass a test provided by a function.
+The filter() method does not execute the function for empty elements.
+The filter() method does not change the original array.
+
+Syntax:
+array.filter(function(currentValue, index, arr), thisValue)
+
+Return Value:
+An array of elements that pass the test.
+An empty array if no elements pass the test.
+
+*/
+
+// Ex.
+const ageArr = [32, 33, 16, 40];
+const res = ageArr.filter(checkAdult);
+
+function checkAdult(age) {
+  return age >= 18;
+}
+
+console.log(res, "filter()"); // [ 32, 33, 40 ]
+
+/*
+JavaScript Array reduce():
+
+The reduce() method executes a reducer function for array element.
+The reduce() method returns a single value: the function's accumulated result.
+The reduce() method does not execute the function for empty array elements.
+The reduce() method does not change the original array.
+
+Syntax:
+array.reduce(function(total, currentValue, currentIndex, arr), initialValue)
+
+Return Value:
+The accumulated result from the last call of the callback function.
+
+*/
+
+// Ex.
+const array1 = [1, 2, 3, 4];
+
+// Initial value for the accumulator
+const initialValue = 0;
+
+// Using reduce to sum up all the elements in the array
+const sumWithInitial = array1.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  initialValue,
+);
+
+console.log(sumWithInitial, "Reduce()");  // 10
+
+/* Note ***
+reduceRight() : 
+The reduceRight() method works similarly to reduce(), but 
+it processes the array elements from right to left (i.e. starting from the last element and moving towards the first one).
+ (Use above example for refrence and output will be same i.e 10 (0+4+3+2+1))
+*/
+
+
+
+/*
+JavaScript Array sort():
+
+The sort() method sorts the elements of an array.
+The sort() method sorts the elements as strings in alphabetical and ascending order.
+The sort() method overwrites the original array.
+
+Syntax:
+array.sort(compareFunction)
+
+Return Value:
+The updated array with the sorted items.
+
+*/
+
+// EX.
+const fruity = [ "Banana", "Orange", "Apple", "Mango" ];
+console.log(fruity.sort(), "****sort() without compare function"); // [ 'Apple', 'Banana', 'Mango', 'Orange' ]
+
+
+// Sort Compare Function : [Numeric Sorts***]
+/*
+Sorting alphabetically works well for strings ("Apple" comes before "Banana").
+But, sorting numbers can produce incorrect results.
+"25" is bigger than "100", because "2" is bigger than "1".
+You can fix this by providing a "compare function".
+
+Syntax:
+array.sort(compareFunction)
+
+Return Value:
+The updated array with the sorted items.
+
+*/
+
+// Sort numbers :
+// Create an Array
+const points = [40, 100, 1, 5, 25, 10];
+
+// Sort the Array in ascending order 
+let newResult = points.sort(function(a, b){return a-b});
+console.log(newResult, "SORT with compare function - Ascending order"); // [ 1, 5, 10, 25, 40, 100 ]
+
+// Sort the Array in descending order:
+let newRes1 = points.sort(function(a, b){return b-a});
+console.log(newRes1, "SORT with compare function - descending order"); // [ 100, 40, 25, 10, 5, 1 ]

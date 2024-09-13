@@ -106,5 +106,3 @@ const fruits = ["Banana", "Orange", "Apple", "Mango"];
 console.log( delete fruits[0], "delete");
 console.log(fruits, "fruits"); // [ <1 empty item>, 'Orange', 'Apple', 'Mango' ]
 
-
-
