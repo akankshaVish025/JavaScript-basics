@@ -83,6 +83,8 @@ const myn3 = myArr1.splice(1, 3, "hi");
 console.log(myn3, "myn3");
 console.log(myArr1, "Original Array");
 
+const nums = [1, 2, 3, 4];
+console.log(nums.splice(1, 0), "Splice");   // [] Since you're removing zero elements, it returns an empty array [].
 
 // toSpliced(): The toSpliced() method copies version of the splice() method. 
 // It returns a new array with some elements removed and/or replaced at a given index.
@@ -96,9 +98,18 @@ console.log(myArr1, "Original Array");
 // console.log(myArr, "Original Array");
 
 
+/*
 
+delete() method:
 
+*** Warning !
+Using delete() leaves undefined holes in the array.
 
+Use pop() or shift() instead.
 
-
+*/ 
+// EXample: 
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+console.log( delete fruits[0], "delete");
+console.log(fruits, "fruits"); // [ <1 empty item>, 'Orange', 'Apple', 'Mango' ]
 
