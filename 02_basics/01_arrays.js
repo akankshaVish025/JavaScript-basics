@@ -2,7 +2,7 @@
 /* 
 JS arrays are resizeable and can contain a mix of diffrent datatypes.
 JS arrays are not associative arrays and so, array elements cannot be accessed using arbitary strings as indexes.
-i.e console.log(myArr[0]) But NOt -> console.log(myArr["one"])
+i.e console.log(myArr[0]) But NOT -> console.log(myArr["one"])
 JS arrays are zero-indexed, i.e index starts from 0....n
 JS arrays-operations create shallow copies.(All standard built-in copy operations with any JS objects create shallow copies, rather than deep copies).
 
@@ -19,19 +19,19 @@ console.log(myArr2[1], myArr[0]);
 
 // The push() method adds a new element to an array (at the end).
 myArr.push(6)
-console.log(myArr, "push");
+console.log(myArr, "push");   // [0, 1, 2, 3, 4, 6]
 
 // The pop() method removes the last element from an array, pop does not need any argument.
 myArr.pop()
-console.log(myArr, "pop");
+console.log(myArr, "pop");  // [0, 1, 2, 3, 4]
 
 // The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements.
 myArr.unshift(9)
-console.log(myArr, "unshift");
+console.log(myArr, "unshift");  // [9, 0, 1, 2, 3, 4]
 
 // The shift() method removes the first element from an array and returns that removed element.Id does not need any argument.
 myArr.shift()
-console.log(myArr, "shift");
+console.log(myArr, "shift"); // [0, 1, 2, 3, 4]
 
 // The includes() method determines whether an array includes a certain value among its entries, returning true or false as appropriate.
 console.log(myArr.includes(9)); // False
@@ -54,8 +54,8 @@ console.log(newArr, typeof newArr, "join");
 // The method then selects elements from the start argument, and up to (but not including) the end argument.
 //*** The original array will not be modified.
 //The slice() method creates a new array.
-// The slice() method does not remove any elements from the source array.
-// The ***slice() method slices out a piece of an array.
+// The slice() method does not remove any elements from the source/original array.
+// The slice() method slices out a piece of an array.
 
 console.log( "Array:", myArr);
 const myn1 = myArr.slice(1, 3);  // start = 1, end = 3 , start from index 1 but does not include 3
@@ -66,15 +66,22 @@ console.log(myArr, "Original Array");
 // SPLICE: The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
 //*** The original array will be modified.
 // To create a new array with a segment removed and/or replaced without mutating/modifying the original array, use toSpliced().
-// The ***splice() method adds new items to an array.
+// The splice() method adds new items to an array.
 // The splice() method can take two or three arguments like slice(1, 3)
 // The first parameter defines the position where new elements should be added (spliced in).
 // The second parameter defines how many elements should be removed.
 // Third element is optional, which defines the new elements to be added.
 
+// Ex .1
 const myn2 = myArr.splice(1, 3);
 console.log(myn2, "myn2");
 console.log(myArr, "Original Array");
+
+// Ex. 2
+let myArr1 = [0, 1, 2, 3, 4]
+const myn3 = myArr1.splice(1, 3, "hi");
+console.log(myn3, "myn3");
+console.log(myArr1, "Original Array");
 
 
 // toSpliced(): The toSpliced() method copies version of the splice() method. 
@@ -84,9 +91,9 @@ console.log(myArr, "Original Array");
 // The difference between the new toSpliced() method and the old splice() method is that the new method creates a new array, 
 // keeping the original array unchanged, while the old method altered the original array.
 
-const myn3 = myArr.toSpliced(0, 1);   // need latest version of node.js
-console.log(myn3, "myn3");
-console.log(myArr, "Original Array");
+// const myn3 = myArr.toSpliced(0, 1);   // need latest version of node.js
+// console.log(myn3, "myn3");
+// console.log(myArr, "Original Array");
 
 
 
