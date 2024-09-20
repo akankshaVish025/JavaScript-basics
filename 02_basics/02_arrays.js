@@ -41,9 +41,9 @@ console.log(spreadRes, "spread operator"); // [ 'thor', 'Ironman', 'spiderman', 
 
 // ex. 
 const arr2 = [0, 1, [2, [3, [4, 5]]]];
-console.log(arr2.flat(), "default flat"); // default 1
-console.log(arr2.flat(2), "depth - 2"); // depth 2
-console.log(arr2.flat(3), "depth - 3"); // depth 2
+console.log(arr2.flat(), "default flat"); // default 1 - [ 0, 1, 2, [ 3, [ 4, 5 ] ] ]
+console.log(arr2.flat(2), "depth - 2"); // depth 2 - [ 0, 1, 2, 3, [ 4, 5 ] ]
+console.log(arr2.flat(3), "depth - 3"); // depth 3 - [ 0, 1, 2, 3, 4, 5 ]
  
 const newArr = [1, 2, 3, [4, 5, 6], 7, [6, 7, [4, 5]]];
 const real_newArr = newArr.flat(Infinity);  // In flat i need to provide 2 depth , 3 depth or either infinity
@@ -93,7 +93,7 @@ for (let i in myObj.cars) {
     }
   }
 
-console.log(x, "x"); // <h1>Ford</h1>FiestaFocusMustang<h1>BMW</h1>320X3X5<h1>Fiat</h1>500Panda x
+console.log(x, "x"); // <h1>Ford</h1>FiestaFocusMustang<h1>BMW</h1>320X3X5<h1>Fiat</h1>500Panda
 
 console.log(Array.isArray("Akanksha")) // false
 
@@ -108,7 +108,7 @@ Using x.from(), where x is an array will return undefined.
 console.log(Array.from("Akanksha")) // ['A', 'k', 'a','n', 'k', 's','h', 'a']
 
 // Interesting ****
-console.log(Array.from({ name: "Akanksha" })) // [] because we have to specify which of which parmeter you want to make array (keys or values)
+console.log(Array.from({ name: "Akanksha" })) // [] because we have to specify which parmeter you want to make array (keys or values)
 
 let score1 = 100;
 let score2 = 200;
@@ -249,7 +249,7 @@ JavaScript Array fill():
 
 The fill() method fills specified elements in an array with a value.
 The fill() method overwrites the original array.
-Start and end position can be specified. If not, all elements will be filled.
+Start and end position can be specified. If not, all elements will be filled with value specified in fill().
 
 Syntax:
 array.fill(value, start, end)

@@ -20,12 +20,13 @@ const outsideTemp = null; // Null
 let userEmail; // Undefined
 // console.log(typeof userEmail);
 
-// 5. Symbol
+// 5. Symbol  - Every Symbol() call is guaranteed to return a unique Symbol.
+// Returns primitive values of type Symbol. Throws an error when called with 'new' keyword.
 const id = Symbol("123");
 const anotherId = Symbol("123");
-// console.log(typeof anotherId);
+console.log(typeof anotherId, "***TYPE OF SYMBOL");
 
-// console.log(id === anotherId);
+console.log(id === anotherId);  // FALSE
 
 // 6. BigInt
 // const bigNumber = 34397996867838279898n
