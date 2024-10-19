@@ -32,4 +32,8 @@ let state;
 
 console.log(typeof "Akanksha");
 console.log(typeof null);  // object
+// Reason:
+// When JavaScript was first developed, values were stored in a way where the data type was identified by the first few bits of their binary representation. 
+// For objects, the first bits were 00. 
+// Unfortunately, null was represented with all zeros in binary (00000000), which led the language to mistakenly classify it as an object.
 console.log(typeof undefined); // undefined

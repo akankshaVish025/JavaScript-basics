@@ -10,7 +10,7 @@ accountCity = "Jaipur"
 
 accountEmail = "abc@gmail.com"
 accountPassword = "212121"
-accountCity = "Bengaluru"
+accountCity = "Bengaluru"  // declaring variable with using any keywords
 let accountState;
 
 console.log(accountId);

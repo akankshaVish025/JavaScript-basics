@@ -65,7 +65,6 @@ console.log(myArr, "Original Array");
 
 // SPLICE: The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
 //*** The original array will be modified.
-// To create a new array with a segment removed and/or replaced without mutating/modifying the original array, use toSpliced().
 // The splice() method adds new items to an array.
 // The splice() method can take two or three arguments like slice(1, 3)
 // The first parameter defines the position where new elements should be added (spliced in).
