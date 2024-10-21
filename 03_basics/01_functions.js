@@ -88,3 +88,68 @@ function loginUserMessage2(username = "sam") {
     return `${username} just logged in` // this line will never execute, whenever if co dition is satisfied
 }
 console.log(loginUserMessage2("")); // sam just logged in
+
+// --- --- ---- ----- ---
+
+/*
+How to pass Multiple values in a function - Rest(...) operator
+
+Rest Operator(...):
+The JavaScript Rest parameter allows a function to accept an indefinite number of arguments as an array. 
+It is represented by three dots (…) followed by the parameter name and must be the last parameter in the function, 
+enabling flexible and dynamic argument handling.
+
+Syntax:
+function functionname(...parameters)
+{
+statement;
+}
+*/
+
+function calculateCartPrice(...num1) {  // Uses rest parameter(...)
+    return num1;
+}
+console.log(calculateCartPrice(200, 400, 500, 2000));
+
+// Another one:
+function calculateCartPrice1(val1, val2, ...num1) {  // Uses rest parameter(...)
+    return num1;
+}
+console.log(calculateCartPrice1(200, 400, 500, 2000));  // [ 500, 2000 ], here val1 = 200 and val2 = 400
+
+// Examples:
+// Define a function with two regular parameters and one rest parameter:
+
+function myBio(firstName, lastName, ...otherInfo) { 
+return otherInfo;
+}
+
+// Invoke myBio function while passing five arguments to its parameters:
+console.log(myBio("Oluwatobi", "Sofela", "CodeSweetly", "Web Developer", "Male")); // ["CodeSweetly", "Web Developer", "Male"]
+
+
+// How to pass object to function as parmeter
+const user = {
+    username: "Akanksha",
+    price: 199
+};
+
+function handleObject(anyObject) {
+    console.log(`Username is ${anyObject.username} and price is ${anyObject.price}`);
+}
+// handleObject(user);  // Username is Akanksha and price is 199
+handleObject({
+    username: "sam",
+    price: 399
+});   // Username is sam and price is 399
+
+// with array
+const myNewArray = [200, 400, 100, 600];
+
+function returnSecondValue(getArray) {
+    return getArray[1];
+};
+
+// console.log(returnSecondValue(myNewArray)); //400
+console.log(returnSecondValue([200, 400, 100, 600]));
+
