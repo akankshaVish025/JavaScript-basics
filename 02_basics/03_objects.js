@@ -136,3 +136,28 @@ const user = {
 
 user.greeting(); // Output: Hello, undefined
 */
+
+const test1 = {
+    name: 'john',
+    lastname: 'muler',
+    greet: function() {
+        console.log(this.name);
+        console.log(this.lastname);
+        console.log(this);
+    }
+}
+
+test1.greet() 
+
+
+const test = {
+    name: 'john',
+    lastname: 'muler',
+    greet: () => {
+        console.log(this.name);
+        console.log(this.lastname);
+        console.log(this);
+    }
+}
+
+test.greet() 
