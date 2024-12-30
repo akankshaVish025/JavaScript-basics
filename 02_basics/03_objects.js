@@ -160,4 +160,4 @@ const test = {
     }
 }
 
-test.greet() 
+test.greet()

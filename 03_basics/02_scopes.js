@@ -52,8 +52,26 @@ if (true) {
     // block scope
 }
 console.log(a); // 300
- 
-for (let i = 0; i < array.length; i++) {
-    const element = array[i];
+
+// Closure: A closure is a function that has access to the lexical environment, or outer scope, 
+// of the function that created it
+
+// Example:
+function one() {
+    let userName = "Akanksha";
+
+    function two() {
+        const website = "Youtube";
+        console.log(userName, "userName");
+    }
+    // console.log(website, "website");  // ReferenceError: website is not defined
+    two();
 }
+
+one();
+
+
+// for (let i = 0; i < array.length; i++) {
+//     const element = array[i];
+// }
 
