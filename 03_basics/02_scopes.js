@@ -75,3 +75,5 @@ one();
 //     const element = array[i];
 // }
 
+// Note: when checking scope in browser's inspect console then the scope is different compared to scope present in node.js,
+// when we run code in node environment

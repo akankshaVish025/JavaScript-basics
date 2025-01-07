@@ -30,7 +30,8 @@ myArr.unshift(9)
 console.log(myArr, "unshift");  // [9, 0, 1, 2, 3, 4]
 
 // The shift() method removes the first element from an array and returns that removed element.Id does not need any argument.
-myArr.shift()
+console.log(myArr, "myArr")
+console.log(myArr.shift()); // Removed 9
 console.log(myArr, "shift"); // [0, 1, 2, 3, 4]
 
 // The includes() method determines whether an array includes a certain value among its entries, returning true or false as appropriate.
@@ -43,7 +44,7 @@ console.log(myArr.indexOf(3)); // 3 (present)
 // The join() method creates and returns a new string by concatenating all of the elements in this array, separated by commas or a specified separator string. 
 // If the array has only one item, then that item will be returned without using the separator.
 const newArr = myArr.join();
-console.log(myArr, "myArr");
+console.log(myArr, "myArrJoin");
 console.log(newArr, typeof newArr, "join");
 
 /***  SLICE , SPLICE   ***/
