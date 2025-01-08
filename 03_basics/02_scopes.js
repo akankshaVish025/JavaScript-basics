@@ -77,3 +77,28 @@ one();
 
 // Note: when checking scope in browser's inspect console then the scope is different compared to scope present in node.js,
 // when we run code in node environment
+
+// scope in if block
+if(true) {
+    const userName = "Akanksha";
+    if(userName === "Akanksha") {
+        const website = " youtube";
+        console.log(userName + website); // this line is executed sucessfully(Akanksha youtube)
+    }
+    // console.log(website);  // this line will give error(ReferenceError: website is not defined) because of scope.
+}
+// console.log(userName); // this line will also give error(ReferenceError: userName is not defined) because of scope.
+
+// +++++++++++++++++++ interesting +++++++++++++++++++++
+
+// Normal function 
+console.log(addOne(5))  // 6 
+function addOne(num) {
+    return num + 1;
+}
+
+// Function stored in variable (called Expression)
+console.log(addTwo(5))  // ReferenceError: Cannot access 'addTwo' before initialization[Due to concept of Hoisting]
+const addTwo = function(num) {
+    return num + 2;
+}
