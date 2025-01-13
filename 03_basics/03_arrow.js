@@ -16,13 +16,13 @@ const user = {
 }
 
 // user.welcomeMessage // print nothing because welcomeMessage is a method i.e(user.welcomeMessage())
-// user.welcomeMessage() // 
+user.welcomeMessage() // Akshu, welcome to youtube
 
-// // change context
-// user.username = "sam";
-// user.welcomeMessage();
+// change context
+user.username = "sam";
+user.welcomeMessage(); // sam, welcome to youtube
 
-console.log(this) // {} - beacause 'this' keyword refers to node environment, where It refers to empty object
+console.log(this) // {} - beacause 'this' keyword refers to node environment, where It refers to empty object.
 
 function chai() {
     console.log(this);// get some object in this
@@ -92,11 +92,11 @@ console.log(addTwo(1, 5));
 // console.log(addTwo1(3, 4));
 
 // what if i want to return object
-// const returnObject = (num1, num2) => {username: "akshu"};
-// console.log(returnObject(3,4)) // undefined - because we cannot return object this way,to return it object needs to wraped in parenthesis().
+const returnObject = (num1, num2) => {username: "akshu"};
+console.log(returnObject(3,4), "ch") // undefined-because we cannot return object this way,to return it object needs to wraped in parenthesis().
 // check after adding parenthesis:
-const returnObject = (num1, num2) => ({username: "akshu"});
-console.log(returnObject(3,4)) // { username: 'akshu' }
+// const returnObject = (num1, num2) => ({username: "akshu"});
+// console.log(returnObject(3,4)) // { username: 'akshu' }
 
 // Explicit return:
 // An explicit return is when you explicitly write the word return in the function.
